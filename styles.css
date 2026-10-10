@@ -439,8 +439,9 @@ button {
 }
 
 /* =========================================
-   TABLE / BUNDLES
+   6. BUNDLES / MENU TABLE
    ========================================= */
+
 .table-container {
   width: 100%;
   max-width: 1280px;
@@ -448,6 +449,7 @@ button {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 16px rgba(43, 35, 31, 0.03);
 }
 
 .table-row {
@@ -463,6 +465,7 @@ button {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .row-white {
@@ -508,8 +511,9 @@ button {
 }
 
 /* =========================================
-   STORY SECTION
+   7. STORY SECTION
    ========================================= */
+
 .section-story {
   width: 100%;
   min-height: 672px;
@@ -534,6 +538,7 @@ button {
   height: 480px;
   border-radius: 24px;
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(43, 35, 31, 0.08);
 }
 
 .story-content {
@@ -585,8 +590,8 @@ button {
 .feature-icon-badge {
   width: 22px;
   height: 22px;
-  border-radius: 11px;
-  background-color: rgba(230, 161, 0, 0.1);
+  border-radius: 50%;
+  background-color: rgba(230, 161, 0, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -599,8 +604,9 @@ button {
 }
 
 /* =========================================
-   PRE-ORDER FORM SECTION
+   8. PRE-ORDER FORM SECTION
    ========================================= */
+
 .section-inquiry {
   background-color: #fffdf7;
   align-items: center;
@@ -614,7 +620,7 @@ button {
   border-radius: 16px;
   outline: 1px solid #eadfd9;
   outline-offset: -1px;
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 12px 40px rgba(43, 35, 31, 0.04);
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -671,6 +677,12 @@ button {
   font-size: 14px;
   color: #2b231f;
   outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.field-input:focus,
+.field-textarea:focus {
+  border-color: #d9531e;
 }
 
 .field-input::placeholder,
@@ -696,6 +708,7 @@ button {
   font-size: 14px;
   resize: vertical;
   outline: none;
+  transition: border-color 0.2s ease;
 }
 
 .field-textarea::placeholder {
@@ -711,8 +724,9 @@ button {
 }
 
 /* =========================================
-   FOOTER
+   9. FOOTER
    ========================================= */
+
 .footer {
   width: 100%;
   background-color: #2b231f;
@@ -751,17 +765,10 @@ button {
   width: 36px;
   height: 36px;
   background-color: #e6a100;
-  border-radius: 18px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.footer-icon-mark {
-  width: 14.97px;
-  height: 15px;
-  outline: 2px #2b231f solid;
-  outline-offset: -1px;
 }
 
 .footer-brand-title {
@@ -782,6 +789,7 @@ button {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .footer-link-list {
@@ -791,6 +799,10 @@ button {
   gap: 12px;
   color: #c6bab5;
   font-size: 14px;
+}
+
+.footer-link-list a:hover {
+  color: #ffffff;
 }
 
 .hours-block {
@@ -826,22 +838,12 @@ button {
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
 }
 
-.footer-contact-mark {
-  width: 10.67px;
-  height: 13.33px;
-  outline: 2px #e6a100 solid;
-  outline-offset: -1px;
-}
-
-.footer-contact-mark-sq {
-  width: 13.33px;
-  height: 13.33px;
-  outline: 2px #e6a100 solid;
-  outline-offset: -1px;
+.contact-icon {
+  flex-shrink: 0;
 }
 
 .footer-bottom {
@@ -855,18 +857,17 @@ button {
 }
 
 /* =========================================
-   RESPONSIVE VIEWPORTS: TABLET & MOBILE
+   10. RESPONSIVE: TABLET (≤ 1024px)
    ========================================= */
 
-/* Tablet (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
   .hero-section {
-  flex-direction: column; /* Keeps the text on top, image below */
-  text-align: center;
-  padding: 48px 24px;
-  min-height: auto;
-  gap: 40px;
-}
+    flex-direction: column;
+    text-align: center;
+    padding: 48px 24px;
+    min-height: auto;
+    gap: 40px;
+  }
 
   .hero-content {
     align-items: center;
@@ -896,6 +897,11 @@ button {
     align-items: center;
   }
 
+  .story-content {
+    align-items: center;
+    max-width: 100%;
+  }
+
   .feature-grid {
     justify-content: center;
   }
@@ -911,12 +917,15 @@ button {
   }
 }
 
-/* Mobile Phone (max-width: 768px) */
 /* =========================================
-   RESPONSIVE VIEWPORT: MOBILE PHONE (≤ 768px)
+   11. RESPONSIVE: MOBILE (≤ 768px)
    ========================================= */
+
 @media screen and (max-width: 768px) {
-  /* --- Navigation --- */
+  html {
+    scroll-padding-top: 150px;
+  }
+
   .navbar {
     height: auto;
     padding: 20px 24px;
@@ -930,14 +939,10 @@ button {
     gap: 16px 20px;
   }
 
-  /* --- Hero Section (Zero excess gaps / fluid heights) --- */
   .hero-section {
     min-height: auto !important;
     height: auto !important;
-    padding-top: 32px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 32px 20px 40px;
     flex-direction: column;
     text-align: center;
     gap: 24px;
@@ -996,7 +1001,6 @@ button {
     height: 100%;
   }
 
-  /* --- Section Headers & General Sections --- */
   .section {
     padding: 56px 20px;
     gap: 32px;
@@ -1012,7 +1016,6 @@ button {
     width: 100%;
   }
 
-  /* --- Cards Grid --- */
   .cards-grid {
     flex-direction: column;
     align-items: center;
@@ -1024,7 +1027,6 @@ button {
     max-width: 480px;
   }
 
-  /* --- Table / Bundles Horizontal Scroll --- */
   .table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -1043,7 +1045,6 @@ button {
     width: 100px;
   }
 
-  /* --- Story Section --- */
   .section-story {
     flex-direction: column;
     height: auto;
@@ -1081,7 +1082,6 @@ button {
     justify-content: center;
   }
 
-  /* --- Form Section --- */
   .form-container {
     padding: 24px 18px;
     gap: 24px;
@@ -1101,7 +1101,6 @@ button {
     width: 100%;
   }
 
-  /* --- Footer --- */
   .footer {
     padding: 48px 20px 24px;
     gap: 36px;
