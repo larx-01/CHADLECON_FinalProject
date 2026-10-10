@@ -333,17 +333,20 @@
           <div class="form-fields">
             <div class="input-group">
               <label class="field-label">Full Name</label>
-              <input type="text" class="field-input" placeholder="e.g. Maria Santos" />
+              <!-- Added 'required' -->
+              <input type="text" class="field-input" placeholder="e.g. Maria Santos" required />
             </div>
 
             <div class="form-row">
               <div class="input-group">
                 <label class="field-label">Email Address</label>
-                <input type="email" class="field-input" placeholder="maria@domain.com" />
+                <!-- Added 'required' -->
+                <input type="email" class="field-input" placeholder="maria@domain.com" required />
               </div>
               <div class="input-group">
                 <label class="field-label">Mobile Number</label>
-                <input type="tel" class="field-input" placeholder="e.g. 0917 123 4567" />
+                <!-- Added 'required' -->
+                <input type="tel" class="field-input" placeholder="e.g. 0917 123 4567" required />
               </div>
             </div>
           </div>
@@ -356,27 +359,32 @@
             <div class="form-row">
               <div class="input-group">
                 <label class="field-label">Preferred Pick-up Date</label>
-                <div class="select-wrapper">
-                  <span class="placeholder-text">Select pick-up date</span>
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#5C534E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                  </svg>
-                </div>
+                <!-- Replaced fake select wrapper with a functional date calendar input -->
+                <input type="date" class="field-input" required />
               </div>
 
               <div class="input-group">
                 <label class="field-label">Preferred Items</label>
-                <div class="select-wrapper">
-                  <span class="placeholder-text">Classic Pork Box of 12</span>
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#5C534E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                  </svg>
-                </div>
+                <!-- Replaced fake select wrapper with a functional dropdown menu -->
+                <select class="field-input" required>
+                  <option value="" disabled selected>Select an item...</option>
+                  <option value="classic-6">Classic Pork (Box of 6) - ₱370</option>
+                  <option value="classic-12">Classic Pork (Box of 12) - ₱720</option>
+                  <option value="beef-6">Cheesy Beef & Mushroom (Box of 6) - ₱480</option>
+                  <option value="beef-12">Cheesy Beef & Mushroom (Box of 12) - ₱930</option>
+                  <option value="ilocos-6">Ilocos Special Crisp (Box of 6) - ₱430</option>
+                  <option value="ilocos-12">Ilocos Special Crisp (Box of 12) - ₱840</option>
+                  <option value="chicken-6">Kapampangan Chicken Pastel (Box of 6) - ₱420</option>
+                  <option value="chicken-12">Kapampangan Chicken Pastel (Box of 12) - ₱800</option>
+                  <option value="mango-6">Sweet Mango-Cream Cheese (Box of 6) - ₱330</option>
+                  <option value="mango-12">Sweet Mango-Cream Cheese (Box of 12) - ₱620</option>
+                </select>
               </div>
             </div>
 
             <div class="input-group">
               <label class="field-label">Special Requests or Message</label>
+              <!-- Left optional, no 'required' tag -->
               <textarea class="field-textarea" placeholder="Tell us about diet requests, bulk packing preferences, or any other notes..."></textarea>
             </div>
           </div>
