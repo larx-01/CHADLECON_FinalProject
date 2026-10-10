@@ -48,7 +48,7 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <button class="btn btn-primary">Order Now</button>
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Order Now</button>
     </header>
 
     <!-- Hero Section -->
@@ -60,7 +60,7 @@
           Experience the authentic culinary mastery of Pampanga, the food capital of the Philippines. Our signature golden empanadas are freshly baked daily with a flaky, buttery crust, stuffed generously with heritage-inspired family recipes.
         </p>
         <div class="hero-actions">
-          <button class="btn btn-primary btn-with-icon">
+          <button class="btn btn-primary btn-with-icon" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">
             <span>View Menu</span>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
@@ -68,7 +68,7 @@
               <path d="M8 7h8m-8 4h6"/>
             </svg>
           </button>
-          <button class="btn btn-outline-orange">Order Now</button>
+          <button class="btn btn-outline-orange" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Order Now</button>
         </div>
       </div>
 
@@ -126,7 +126,7 @@
               </svg>
               <span>Heritage Recipe</span>
             </div>
-            <button class="btn btn-pill-outline">Select</button>
+            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Select</button>
           </div>
         </article>
 
@@ -161,7 +161,7 @@
               </svg>
               <span>Premium Twist</span>
             </div>
-            <button class="btn btn-pill-outline">Select</button>
+            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Select</button>
           </div>
         </article>
 
@@ -196,7 +196,7 @@
               </svg>
               <span>Regional Pride</span>
             </div>
-            <button class="btn btn-pill-outline">Select</button>
+            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Select</button>
           </div>
         </article>
       </div>
@@ -326,7 +326,7 @@
         </p>
       </div>
 
-      <form class="form-container" onsubmit="event.preventDefault()">
+      <form class="form-container" onsubmit="event.preventDefault(); alert('Inquiry submitted! We will contact you soon.'); this.reset();">
         <!-- Step 1 -->
         <div class="form-step">
           <div class="step-title">1. Customer Details</div>
