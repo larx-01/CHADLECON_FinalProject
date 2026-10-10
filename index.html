@@ -126,7 +126,8 @@
               </svg>
               <span>Heritage Recipe</span>
             </div>
-            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Select</button>
+            <!-- Updated -->
+            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('item-dropdown').value='classic-6';">Select</button>
           </div>
         </article>
 
@@ -161,7 +162,7 @@
               </svg>
               <span>Premium Twist</span>
             </div>
-            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Select</button>
+            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('item-dropdown').value='beef-6';">Select</button>
           </div>
         </article>
 
@@ -196,7 +197,7 @@
               </svg>
               <span>Regional Pride</span>
             </div>
-            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Select</button>
+            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('item-dropdown').value='ilocos-6';">Select</button>
           </div>
         </article>
       </div>
@@ -366,7 +367,7 @@
               <div class="input-group">
                 <label class="field-label">Preferred Items</label>
                 <!-- Replaced fake select wrapper with a functional dropdown menu -->
-                <select class="field-input" required>
+                <select id="item-dropdown" class="field-input" required>
                   <option value="" disabled selected>Select an item...</option>
                   <option value="classic-6">Classic Pork (Box of 6) - ₱370</option>
                   <option value="classic-12">Classic Pork (Box of 12) - ₱720</option>
