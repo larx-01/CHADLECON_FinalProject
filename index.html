@@ -48,11 +48,11 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Order Now</button>
+      <button class="btn btn-primary">Order Now</button>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <section class="hero-section" id="home">
       <div class="hero-content">
         <span class="hero-eyebrow">Authentic Kapampangan Flavors</span>
         <h1 class="hero-title">Handcrafted Golden Empanadas &amp; Heritage Eats</h1>
@@ -60,7 +60,7 @@
           Experience the authentic culinary mastery of Pampanga, the food capital of the Philippines. Our signature golden empanadas are freshly baked daily with a flaky, buttery crust, stuffed generously with heritage-inspired family recipes.
         </p>
         <div class="hero-actions">
-          <button class="btn btn-primary btn-with-icon" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">
+          <button class="btn btn-primary btn-with-icon">
             <span>View Menu</span>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
@@ -68,7 +68,7 @@
               <path d="M8 7h8m-8 4h6"/>
             </svg>
           </button>
-          <button class="btn btn-outline-orange" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Order Now</button>
+          <button class="btn btn-outline-orange">Order Now</button>
         </div>
       </div>
 
@@ -85,7 +85,7 @@
     </section>
 
     <!-- Bestsellers Section -->
-    <section id="menu" class="section section-bestsellers">
+    <section class="section section-bestsellers" id="menu">
       <div class="section-header text-center">
         <span class="badge badge-gold">Bestsellers</span>
         <h2 class="section-title">Our Signature Creations</h2>
@@ -126,8 +126,7 @@
               </svg>
               <span>Heritage Recipe</span>
             </div>
-            <!-- Updated -->
-            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('item-dropdown').value='classic-6';">Select</button>
+            <button class="btn btn-pill-outline">Select</button>
           </div>
         </article>
 
@@ -162,7 +161,7 @@
               </svg>
               <span>Premium Twist</span>
             </div>
-            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('item-dropdown').value='beef-6';">Select</button>
+            <button class="btn btn-pill-outline">Select</button>
           </div>
         </article>
 
@@ -197,7 +196,7 @@
               </svg>
               <span>Regional Pride</span>
             </div>
-            <button class="btn btn-pill-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('item-dropdown').value='ilocos-6';">Select</button>
+            <button class="btn btn-pill-outline">Select</button>
           </div>
         </article>
       </div>
@@ -259,7 +258,7 @@
     </section>
 
     <!-- Our Story Section -->
-    <section id="about" class="section-story">
+    <section class="section-story" id="about">
       <div class="story-media">
         <img 
           src="picture5.jpg" 
@@ -319,7 +318,7 @@
     </section>
 
     <!-- Inquiry / Booking Form Section -->
-    <section id="contact" class="section section-inquiry">
+    <section class="section section-inquiry" id="contact">
       <div class="section-header text-center">
         <h2 class="section-title">Pre-Order &amp; Bulk Inquiries</h2>
         <p class="section-subtitle">
@@ -327,27 +326,24 @@
         </p>
       </div>
 
-      <form class="form-container" onsubmit="event.preventDefault(); alert('Inquiry submitted! We will contact you soon.'); this.reset();">
+      <form class="form-container" onsubmit="event.preventDefault()">
         <!-- Step 1 -->
         <div class="form-step">
           <div class="step-title">1. Customer Details</div>
           <div class="form-fields">
             <div class="input-group">
               <label class="field-label">Full Name</label>
-              <!-- Added 'required' -->
-              <input type="text" class="field-input" placeholder="e.g. Maria Santos" required />
+              <input type="text" class="field-input" placeholder="e.g. Maria Santos" />
             </div>
 
             <div class="form-row">
               <div class="input-group">
                 <label class="field-label">Email Address</label>
-                <!-- Added 'required' -->
-                <input type="email" class="field-input" placeholder="maria@domain.com" required />
+                <input type="email" class="field-input" placeholder="maria@domain.com" />
               </div>
               <div class="input-group">
                 <label class="field-label">Mobile Number</label>
-                <!-- Added 'required' -->
-                <input type="tel" class="field-input" placeholder="e.g. 0917 123 4567" required />
+                <input type="tel" class="field-input" placeholder="e.g. 0917 123 4567" />
               </div>
             </div>
           </div>
@@ -360,32 +356,27 @@
             <div class="form-row">
               <div class="input-group">
                 <label class="field-label">Preferred Pick-up Date</label>
-                <!-- Replaced fake select wrapper with a functional date calendar input -->
-                <input type="date" class="field-input" required />
+                <div class="select-wrapper">
+                  <span class="placeholder-text">Select pick-up date</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#5C534E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </div>
               </div>
 
               <div class="input-group">
                 <label class="field-label">Preferred Items</label>
-                <!-- Replaced fake select wrapper with a functional dropdown menu -->
-                <select id="item-dropdown" class="field-input" required>
-                  <option value="" disabled selected>Select an item...</option>
-                  <option value="classic-6">Classic Pork (Box of 6) - ₱370</option>
-                  <option value="classic-12">Classic Pork (Box of 12) - ₱720</option>
-                  <option value="beef-6">Cheesy Beef & Mushroom (Box of 6) - ₱480</option>
-                  <option value="beef-12">Cheesy Beef & Mushroom (Box of 12) - ₱930</option>
-                  <option value="ilocos-6">Ilocos Special Crisp (Box of 6) - ₱430</option>
-                  <option value="ilocos-12">Ilocos Special Crisp (Box of 12) - ₱840</option>
-                  <option value="chicken-6">Kapampangan Chicken Pastel (Box of 6) - ₱420</option>
-                  <option value="chicken-12">Kapampangan Chicken Pastel (Box of 12) - ₱800</option>
-                  <option value="mango-6">Sweet Mango-Cream Cheese (Box of 6) - ₱330</option>
-                  <option value="mango-12">Sweet Mango-Cream Cheese (Box of 12) - ₱620</option>
-                </select>
+                <div class="select-wrapper">
+                  <span class="placeholder-text">Classic Pork Box of 12</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#5C534E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </div>
               </div>
             </div>
 
             <div class="input-group">
               <label class="field-label">Special Requests or Message</label>
-              <!-- Left optional, no 'required' tag -->
               <textarea class="field-textarea" placeholder="Tell us about diet requests, bulk packing preferences, or any other notes..."></textarea>
             </div>
           </div>
@@ -404,7 +395,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="hours" class="footer">
+    <footer class="footer" id="hours">
       <div class="footer-columns">
         <div class="footer-col col-brand">
           <div class="footer-brand">
@@ -440,10 +431,10 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Quick Links</h4>
           <ul class="footer-link-list">
-            <li><a href="#about">Our Story &amp; Values</a></li>
-            <li><a href="#menu">Detailed Food Menu</a></li>
-            <li><a href="#contact">Special Catering Deals</a></li>
-            <li><a href="#hours">Delivery Hotlines</a></li>
+            <li><a href="#">Our Story &amp; Values</a></li>
+            <li><a href="#">Detailed Food Menu</a></li>
+            <li><a href="#">Special Catering Deals</a></li>
+            <li><a href="#">Delivery Hotlines</a></li>
           </ul>
         </div>
 
